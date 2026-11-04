@@ -7,34 +7,18 @@
 </head>
 <body>
 
+     <h3>perss this button to get suprise</h3>  
+      
+    <p id="demo"></p>
 
-    <table border="1">
-        <thead>
-        <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>age</th>
-        </tr>
-        </thead>
-        <tr>
-            <td>101</td>
-            <td>revanth</td>
-            <td>23</td>
-        </tr>
-        </tbody>
-
-    </table>
-    <br><br>
-
-    <p id="para"></p>
-
-        <button onclick="fun()">get details</button>
-    <br><br>
-        <button onclick="send()">send details</button>
+    <button onclick="show()"></button>
 
     <script>
 
-
+            function show(){
+                let demo = document.getElementById("demo");
+                demo.textContent= "hello madam garu";
+            }
 
        
 
