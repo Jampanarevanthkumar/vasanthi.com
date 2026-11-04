@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Practice</title>
+</head>
+<body>
+    <marquee direction="right"><h4>Student Result Management System</h4></marquee>
+
+    <table id="studentresulttable">
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>TeluguMarks</th>
+                <th>HindiMarks</th>
+                <th>EnglishMarks</th>
+                <th>MathsMarks</th>
+                <th>ScienceMarks</th>
+                <th>SocialMarks</th>
+            </tr>
+        </thead>
+
+        <tbody id="table">
+
+        </tbody>
+
+    </table>
+
+    <p id="err"></p>
+
+    <button onclick="studentresult()">get result</button>
+
+    <script >
+
+        async function studentresult(){
+            
+            try{
+               let result = await fetch("http://localhost:8080/api/students/getall");
+                if(!result.ok){
+                    throw new Error("Student data not found");
+                }
+
+                let res = await result.json();
+                let table = document.getElementById("table");
+
+                table.innerHTML="";
+
+                res.forEach(function(result){
+                     
+                let row = document.createElement("tr")
+
+                    row.innerHTML = "<td>"+result.id+"</td>"+
+                                    "<td>"+result.name+"</td>"+
+                                    "<td>"+result.age+"</td>"+
+                                    "<td>"+result.city+"</td>"+
+                                    "<td>"+result.telugumarks+"</td>"+
+                                    "<td>"+result.hindimarks+"</td>"+
+                                    "<td>"+result.englishmarks+"</td>"+
+                                    "<td>"+result.mathsmarks+"</td>"+
+                                    "<td>"+result.sciencemarks+"</td>"+
+                                    "<td>"+result.socialmarks+"</td>";
+
+                    table.appendChild(row);
+
+                  });
+            }
+            catch(error){
+                 document.getElementById("err").textContent = "student data not found";
+            }
+
+        }
+
+
+
+    </script>
+</body>
+</html>
