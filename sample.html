@@ -10,6 +10,7 @@
      <h3>perss this button to get suprise</h3>  
       
     <p id="demo"></p>
+    <p id="msg"></p>
 
     <button onclick="show()">Click</button>
 
@@ -36,7 +37,9 @@
             }
 
             function hi(){
-                alert("deleted sucessfyllu");
+                let a = document.getElementById("msg");
+                a.textContent ="deleted sucessfully";
+                a.style.color = "red";
             }
 
     </script>
