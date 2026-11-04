@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JampanaRevanthKumar</title>
+
+    <style>
+        #aa{
+            font-size: 17px;
+        }
+    </style>
 </head>
 <body>
 
-     <h3>perss this button to get suprise</h3>  
+    <h5 id="aa">Your beauty makes my heart skip a beat, your smile makes my world brighter, and falling in love with you is my favourite thing to do every single day. ❤️😘 Now, my beautiful queen, click on the button below! 💖</h5>
+    <hr> 
+    <h3>Press This Button To Get Suprise</h3>  
+
       
     <p id="demo"></p>
     <p id="msg"></p>
+
+    <br><br>
+
+  
 
     <button onclick="show()">Click</button>
 
     <button onclick="del();hi()">Delete</button>
     <p id="no"></p>
 
+     <button><a href="image.html">Next</a></button>
+
     <script>
 
             function show(){
                 let demo = document.getElementById("demo");
                 
-                demo.innerHTML += "<h5>"+"hello"+"</h5>";
+                demo.innerHTML += "<h4>"+"I Love You Vasanthi Mannem"+"</h4>";
             }
 
             function del(){
@@ -37,13 +52,9 @@
             }
 
             function hi(){
-                let a = document.getElementById("msg");
-                a.textContent ="deleted sucessfully";
-                a.style.color = "red";
+                alert("deleted sucessfully");
             }
 
-    </script>
-
-    
+    </script>    
 </body>
 </html>
