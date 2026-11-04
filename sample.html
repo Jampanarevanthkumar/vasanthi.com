@@ -13,6 +13,9 @@
 
     <button onclick="show()">Click</button>
 
+    <button onclick="del">Delete</button>
+    <p id="no"></p>
+
     <script>
 
             function show(){
@@ -21,7 +24,16 @@
                 demo.innerHTML += "<h5>"+"i love you vasanthi"+"</h5>";
             }
 
-       
+            function del(){
+                let demo = document.getElementById("demo");
+
+                if(demo.firstElementChild != null){
+                    demo.firstElementChild.remove();
+                }
+                else{
+                        document.getElementById("no").textContent="no content available";
+                }
+            }
 
     </script>
 
