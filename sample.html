@@ -9,10 +9,25 @@
         #aa{
             font-size: 17px;
         }
+        #parent{
+            height:600px;
+            width:1200px;
+            background-color: rgb(151, 107, 228);
+             padding-left: 50px;
+            padding-right:50px;
+            padding-top:20px;
+        }
+         #button{
+            border:2px solid black;
+            height:30px;
+            width:70px;
+            border-radius: 7px;
+        }
     </style>
 </head>
 <body>
 
+    <div id="parent">
     <h5 id="aa">Your beauty makes my heart skip a beat, your smile makes my world brighter, and falling in love with you is my favourite thing to do every single day. ❤️😘 Now, my beautiful queen, click on the button below! 💖</h5>
     <hr> 
     <h3>Press This Button To Get Suprise</h3>  
@@ -25,13 +40,14 @@
 
   
 
-    <button onclick="show()">Click</button>
+    <button id="button" onclick="show()">Click</button>
 
-    <button onclick="del();hi()">Delete</button>
+    <button id="button" onclick="del();hi()">Delete</button>
     <p id="no"></p>
 
-     <button><a href="image.html">Next</a></button>
+     <button id="button"><a href="image.html">Next</a></button>
 
+     </div>
     <script>
 
             function show(){
