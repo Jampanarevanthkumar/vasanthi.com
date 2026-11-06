@@ -8,6 +8,7 @@
         #img{
             border: 3px solid rgb(84, 16, 185);
             box-shadow: 8px  10px 10px rgb(202, 185, 185);
+            transition: 3s;
         }
         #parent{
             height:680px;
@@ -22,6 +23,15 @@
             color:transparent;
             background-clip: text;
             font-size: 28px;
+        }#button{
+            border:2px solid black;
+            height:30px;
+            width:100px;
+            border-radius: 7px;
+        }
+        
+        #img:hover{
+            transform: rotate(365deg);
         }
     </style>
 </head>
@@ -34,8 +44,19 @@
      <center>
     
        <h4>Chinnoda</h4>
-    
+       <br>
+        
+       <button id="button" onclick="change()">change image</button>
     </div>
     
+
+    <script>
+
+        function change(){
+            document.getElementById("img").src="images/vasu1.jpeg";
+            
+        }
+
+    </script>
 </body>
 </html>
