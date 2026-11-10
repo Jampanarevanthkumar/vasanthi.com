@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi Mannem Vasanthi</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=person" />
+     <link rel="icon" type="image/png" href="images/vasu.jpeg" id="img">
     <style>
         #parent{
             height:680px;
@@ -43,12 +44,55 @@
             border-radius: 8px;
             
         }
+         #parent1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+     }
+     .child{
+        height:25px;
+        width:50px;
+        border:2px solid black;
+        text-align: center;
+        border-radius: 5px;
+        transition: 1s;
+     }
+     .child1{
+        height:25px;
+        width:60px;
+        border:2px solid black;
+        text-align: center;
+        border-radius: 5px;
+        transition: 1s;
+     }
+     .child:hover{
+         height:28px;
+        width:60px;
+        background-color: rgb(42, 195, 242);
+        /* color: white; */
+     }
+     .child1:hover{
+         height:28px;
+        width:65px;
+        background-color: rgb(42, 195, 242);
+        /* color: white; */
+     }
     
     </style>
 </head>
 <body>
+
+     
     
    <div id="parent">
+    <div id="parent1">
+            <h3 class="child">home</h3>
+            <h3 class="child">about</h3>
+            <h3 class="child1">contact</h3>
+            <h3 class="child">user</h3>
+            <h3 class="child">logout</h3>
+        </div>
     <center><div id="time"><p class="para"></p></div></center>
      <h1>Error...!</h1>
      <p>welcome to malicious site your bank account has been hacked and maintained by hacker</p>
