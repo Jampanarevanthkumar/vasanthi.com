@@ -73,13 +73,34 @@
     <br>
     <label id="n">password</label>
     <br>
-    <input id="pass" type="password" placeholder="Enter password" required>
+    <input id="pass" type="password" placeholder="Enter password">
     <p id="para2"></p>
     <br>
-    <button id="login">login</button>
+    <label id="n">conform password</label>
+    <br>
+    <input id="pass1" type="password1" placeholder="Enter password">
+    <p id="para3"></p>
+    <br>
+    <button id="login" >login</button>
     </div>
+    <br><br><br><br>
 
        <script>
+               let a = document.getElementById("name");
+               let b = document.getElementById("pass");
+               let c = document.getElementById("pass1");
+      
+            if(a === "" || b === "" || c === ""){
+
+             document.getElementById("login").disabled = true;
+            
+            }
+            else{
+             document.getElementById("login").disabled = false;
+             
+            }
+
+
      
 
        </script>

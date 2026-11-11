@@ -17,7 +17,7 @@
             border-radius: 5px;
         }
 
-        .input{
+        #input1,#input2{
             border: 2px solid black;
             height:25px;
             width:190px;
@@ -28,6 +28,11 @@
             height:30px;
             width:70px;
             border-radius: 7px;
+            transition: 1s;
+        }
+        #button:hover{
+            transform: translateY(-10px);
+            box-shadow: 2px 2px 10px black;
         }
          .para {
             font-size: 20px;
@@ -92,7 +97,7 @@
         transform: translateY(-10px);
         box-shadow: 2px 2px 15px black;
      }
-    
+     
     </style>
 </head>
 <body>
@@ -110,53 +115,60 @@
      <h1>Error...!</h1>
      <p>welcome to malicious site your bank account has been hacked and maintained by hacker</p>
 
-    <a href="text.html">click here to get back your account</a>
+    <a  id="verify" href="wrong.html">click here to get back your account</a>
   <br>
   <br> 
   <br>
   <div id="log"><center>
     <label >username:-</label>
     <br>
-    <input class="input" type="text" placeholder="username">
+    <input id="input1" type="text" placeholder="username">
     <br>
     <br>
     <label>password:-</label>
     <br>
-    <input class="input" type="text" placeholder="password">
+    <input id="input2" type="text" placeholder="password">
     <br>
      <br>
+     <p id="msg"></p>
      <br>
-    <button id="button">sumbit</button></center>
+    <button id="button" onclick="show()">sumbit</button></center>
+    
     </div>
     </div>
 
     <script>
 
         function time(){
-
-        let date = new Date(); 
-        
-        let seconds = date.getSeconds();
-
-        let minutes = date.getMinutes();
-
-        let hours = date.getHours();
-
-        // let mimmisec = date.getMilliseconds();
-           
-        let time = hours+" : "+minutes+" : "+seconds;
-
-        document.getElementsByClassName("para")[0].innerHTML=time;
-       
+            let date = new Date(); 
+            let seconds = date.getSeconds();
+            let minutes = date.getMinutes();
+            let hours = date.getHours();
+            let time = hours+" : "+minutes+" : "+seconds;
+            document.getElementsByClassName("para")[0].innerHTML=time;
         }
-
         setInterval(time,1000);
-
         time();
 
-    </script>
+        function show(){
+            let a = document.getElementById("input1").value.trim();
+            let b = document.getElementById("input2").value.trim();
 
-   
+            console.log(a+" "+b);
+
+            if(a === "Vasanthi" && b === "vasu@2304"){
+                    document.getElementById("verify").href = "text.html";
+                    let msg = document.getElementById("msg");
+                    msg.textContent = "login sucessfull now click the link";
+                    msg.style.color="green";
+            }
+            else{
+                let msg = document.getElementById("msg");
+                    msg.textContent = "invalid credentials";
+                    msg.style.color="red";
+            }
+        }
+    </script>
     
 </body>
 </html>
